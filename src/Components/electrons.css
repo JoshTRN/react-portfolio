@@ -1,0 +1,107 @@
+html,
+body {
+    height: 100%;
+}
+
+#container2 {
+    background-color: #1d1e22;
+    height: 100px;
+    position: relative;
+}
+
+#container {
+    max-height: 100%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    transition: all 70ms ease-in;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.electrons {
+    width: 100%;
+    height: 100%;
+    perspective: 200px;
+    position: relative;
+}
+
+.electrons > .electron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 50%;
+    border-top: 15px solid transparent;
+    border-left: 10px solid #7dd4f7;
+    border-right: 5px solid #7dd4f7;
+
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+}
+
+#e1 {
+    animation-name: rotate-e1;
+}
+
+#e2 {
+    animation-name: rotate-e2;
+}
+
+#e3 {
+    animation-name: rotate-e3;
+}
+
+@keyframes rotate-e1 {
+    0% {
+        transform: rotateX(80deg) rotateY(45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(80deg) rotateY(45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-e2 {
+    0% {
+        transform: rotateX(80deg) rotateY(135deg) rotateZ(-45deg);
+    }
+    100% {
+        transform: rotateX(80deg) rotateY(135deg) rotateZ(315deg);
+    }
+}
+
+@keyframes rotate-e3 {
+    0% {
+        transform: rotateX(80deg) rotateY(00deg) rotateZ(45deg);
+    }
+    100% {
+        transform: rotateX(80deg) rotateY(00deg) rotateZ(405deg);
+    }
+}
+
+.atom {
+    max-height: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    background-color: #5ed6fb;
+    transform: translateZ(-100px);
+
+    animation-delay: 1s;
+    animation-name: pulse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    transition: all 0.2s ease-in-out;
+}
+
+#container:hover {
+    transition: all 50ms ease-in;
+    transform: scale(1.2);
+}
