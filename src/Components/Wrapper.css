@@ -1,0 +1,9 @@
+.wrapper {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+    .wrapper {
+        width: 1200px;
+    }
+}

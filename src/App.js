@@ -1,15 +1,16 @@
 import React from "react";
-import Nav from './Components/Nav'
-import TechBar from './Components/TechBar'
-import "./App.css"
+import Nav from "./Components/Nav";
+import TechBar from "./Components/TechBar";
+import Wrapper from "./Components/Wrapper";
+import "./App.css";
 
 function App() {
     return (
-        <div id="wrapper">
+        <Wrapper>
             <Nav />
-            <img id="profile-pic" src="./img/profile-pic.png" alt="Josh-PFP"/>
+            <img id="profile-pic" src="./img/profile-pic.png" alt="Josh-PFP" />
             <TechBar />
-        </div>
+        </Wrapper>
     );
 }
 export default App;
